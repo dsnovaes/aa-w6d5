@@ -1,0 +1,12 @@
+<a href="<%= cats_url %>">back to index</a>
+<h1>Stats for <%= @cat.name %></h1>
+<ul>
+    <li>Name: <%= @cat.name %></li>
+    <li>Age: <%= @cat.age %></li>
+    <li>Color: <%= @cat.color %></li>
+    <li>Gender: <%= @cat.sex %></li>
+    <% if @cat.description != "" || !@cat.description.nil? %>
+        <li><%= @cat.description %></li>
+    <% end %>
+    <a href="<%= edit_cat_url(@cat)%>">edit cat</a>
+</ul>
